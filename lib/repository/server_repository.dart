@@ -12,13 +12,12 @@ class ServerRepository {
   /// Returns a list of [Server] objects.
   ///
   /// TODO: Implement functionality to load servers from a remote source.
-  List<Server> fetchServers() {
-    final servers = [
-      Server('ip.horizonte-rp.com', 7777),
-      Server('ip.artplaysamp.com', 7778),
-      Server('ip.artplaysamp.com', 7788),
-      Server('ip.artplaysamp.com', 7789),
-    ];
+List<Server> fetchServers() {
+  return [
+    Server('SEU_IP_FIXO', 7777),
+  ];
+}
+
 
     return servers;
   }
