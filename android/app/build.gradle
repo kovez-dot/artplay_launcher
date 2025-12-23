@@ -69,17 +69,19 @@ android {
     }
 
     buildTypes {
-        debug {
-            signingConfig signingConfigs.debug
-            shrinkResources false
-        }
-
-        release {
-            signingConfig signingConfigs.release
-            shrinkResources false
-            proguardFiles getDefaultProguardFile('proguard-android.txt')
-        }
+    debug {
+        signingConfig signingConfigs.debug
+        shrinkResources false
     }
+
+    release {
+        // REMOVE assinatura custom
+        signingConfig signingConfigs.debug
+        shrinkResources false
+        proguardFiles getDefaultProguardFile('proguard-android.txt')
+    }
+}
+
 
     namespace 'com.artplaygames.launcher'
 
